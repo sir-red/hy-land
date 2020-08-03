@@ -1,0 +1,7 @@
+(import [bs4 [BeautifulSoup]])
+(setv raw-data "<html><body><a href=\"http://markwatson.com\">Mark</a></body></html")
+(setv soup (BeautifulSoup raw-data "lxml"))
+(setv a (.find-all soup "a"))
+(print "atags:" a)
+(type a)
+(dir a)
